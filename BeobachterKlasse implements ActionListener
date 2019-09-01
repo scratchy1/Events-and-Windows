@@ -1,0 +1,32 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class BeobachterKlasse implements ActionListener {
+    
+    private TextField t1, t2, t3;
+
+    // Konstruktor!
+    BeobachterKlasse(TextField t1, TextField t2, TextField t3) {
+        this.t1 = t1;
+        this.t2 = t2;
+        this.t3 = t3;
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        String s1 = t1.getText();
+        String s2 = t2.getText();
+        int zahl1 = 0;
+        int zahl2 = 0;
+        int zahl3 = 0;
+        try {
+            zahl1 = Integer.parseInt(s1);
+            zahl2 = Integer.parseInt(s2);
+            zahl3 = zahl1 + zahl2;
+        } catch (NumberFormatException ex) {
+            // Fehlerbehandlung
+        }
+        t3.setEditable(true);
+        t3.setText("" + zahl3);
+    }
+
+}
