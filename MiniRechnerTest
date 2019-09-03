@@ -1,0 +1,16 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class MiniRechnerTest {
+
+    public static void main(String[] argv) {
+        Addierer f = new MiniRechner();
+        f.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+        f.setVisible(true);
+    }
+
+}
