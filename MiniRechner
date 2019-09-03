@@ -8,24 +8,24 @@ public class MiniRechner extends AddiererPlus {
         b2 = new Button("multipliziere");
         add(b2);
         b2.addActionListener(this);
-        b1.addActionListener(this);
     }
-
+    
+    @Override
     public void actionPerformed(ActionEvent e1) {
         if (e1.getSource() == b1) {
             super.actionPerformed(e1);
         } else {
-
             String s1 = t1.getText();
             String s2 = t2.getText();
-            int zahl1 = 0;
-            int zahl2 = 0;
-            int zahl3 = 0;
-            zahl1 = Integer.parseInt(s1);
-            zahl2 = Integer.parseInt(s2);
-            zahl3 = zahl2 * zahl1;
+            int zahl1 = Integer.parseInt(s1);
+            int zahl2 = Integer.parseInt(s2);
+            int zahl3 = zahl2 * zahl1;
             t3.setEditable(true);
             t3.setText("" + zahl3);
         }
     }
-}
+}    
+    
+
+            
+            
